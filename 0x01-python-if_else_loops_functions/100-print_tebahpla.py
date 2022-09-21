@@ -7,4 +7,3 @@ while i >= 97:
         diff = 0
     print("{}".format(chr(i - diff)), end="")
     i = i - 1
-        
