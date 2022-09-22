@@ -11,4 +11,3 @@ if __name__ == "__main__":
         print(f"{arglen} arguments:")
         for elemIndex in range(1, arglen + 1):
             print(f"{elemIndex}: {sys.argv[elemIndex]}")
-    #print(arglen)
