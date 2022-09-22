@@ -2,15 +2,15 @@
 if __name__ == "__main__":
     import sys
     from calculator_1 import add, sub, mul, div
-    arglen = len(sys.argv)
+    arglen = len(sys.argv) - 1
     operators = ['+', '-', '*' '/']
-    if (arglen < 4):
+    if (arglen < 3):
         print(f"Usage: ./100-my_calculator.py <a> <operator> <b>")
-        sys.exit(1)
+        exit(1)
     else:
         if sys.argv[2] not in operators:
             print(f"Unknown operator. Available operators: +, -, *, and /")
-            sys.exit(1)
+            exit(1)
         else:
             a = int(sys.argv[1])
             b = int(sys.argv[3])
