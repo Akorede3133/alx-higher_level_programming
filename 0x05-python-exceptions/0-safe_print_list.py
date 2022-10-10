@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    length = len(my_list)
+    length = 0
     try:
         for i in range(x):
             print(my_list[i], end="")
@@ -8,4 +8,6 @@ def safe_print_list(my_list=[], x=0):
         return i + 1
     except IndexError:
         print()
-        return len(length)
+        for elem in my_list:
+            length += 1
+        return length
