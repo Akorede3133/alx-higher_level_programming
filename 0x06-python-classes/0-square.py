@@ -5,5 +5,3 @@
 class Square:
     """Calling pass to indicate it is empty"""
     pass
-
-
