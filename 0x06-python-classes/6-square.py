@@ -6,7 +6,7 @@ class Square:
     """giving atrributes to the class"""
     def __init__(self, size=0, position=(0, 0)):
         """instantiator for each instances"""
-        if position[0] < 0 or position[1] < 0:
+        if self.__position[0] < 0 or self.__position[1] < 0:
             raise TypeError('positon must be a tuple of 2 positive integers')
         else:
             self.__position = position
