@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 class Square:
-    """Creating an square class
-        but it will be empty for
-        now
-    """
+    """An empty square class"""
+
+    """calling pass to indicate it is empty"""
     pass
-my_square = Square()
