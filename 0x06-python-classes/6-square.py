@@ -6,16 +6,8 @@ class Square:
     """giving atrributes to the class"""
     def __init__(self, size=0, position=(0, 0)):
         """instantiator for each instances"""
-        if position[0] < 0 or position[1] < 0:
-            raise TypeError('positon must be a tuple of 2 positive integers')
-        else:
-            self.__position = position
-        if type(size) != int:
-            raise TypeError('size must be an integer')
-        elif size < 0:
-            raise ValueError('size must be >= 0')
-        else:
-            self.__size = size
+        self.size = size
+        self.position = position
 
     def area(self):
         """An area method for each instance"""
@@ -36,15 +28,41 @@ class Square:
         else:
             self.__size = value
 
+    @property
+    def position(self):
+        """a getter method to retrieve the size"""
+        return self.__size
+
+    @position.setter
+    def position(self, value):
+        """a setter method to set value to value given"""
+        if len(value) != 2 or value[0] < 0 or value[1] < 0:
+            raise TypeError('position  must be a tuple of 2 positive integers')
+        else:
+            self.__position = value
+
     def my_print(self):
         """print a square given the size"""
         if self.__size == 0:
             print()
         else:
             for i in range(self.__size):
-                if self.__position[1] > 0:
-                    for k in range(self.__position[0]):
-                        print(" ", end="")
+                for k in range(self.__position[0]):
+                    print(" ", end="")
                 for j in range(self.__size):
                     print("#", end="")
                 print()
+my_square_1 = Square(3)
+my_square_1.my_print()
+
+print("--")
+
+my_square_2 = Square(3, (1, 1))
+my_square_2.my_print()
+
+print("--")
+
+my_square_3 = Square(3, (3, 0))
+my_square_3.my_print()
+
+print("--")
