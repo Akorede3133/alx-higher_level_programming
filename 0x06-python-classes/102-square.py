@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A class that defines a sqaure"""
 
+
 class Square:
     """A square class"""
     def __init__(self, size=0):
@@ -24,6 +25,7 @@ class Square:
     def area(self):
         """method to return area"""
         return (self.__size ** 2)
+
     def __bool__(self):
         """returning the boolean value of instance attribute"""
         return bool(self.__size)
@@ -31,6 +33,7 @@ class Square:
     def __eq__(self, other):
         """checking for equality of square areas"""
         return bool(Square(self.area() == other.area()))
+
     def __ne__(self, other):
         """checking for inequality of square areas"""
         return bool(Square(self.area() != other.area()))
