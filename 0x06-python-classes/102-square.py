@@ -30,23 +30,23 @@ class Square:
 
     def __eq__(self, other):
         """checking for equality of square areas"""
-        return Square(self.area() == other.area())
+        return bool(Square(self.area() == other.area()))
     def __ne__(self, other):
         """checking for inequality of square areas"""
-        return Square(self.area() != other.area())
+        return bool(Square(self.area() != other.area()))
 
     def __gt__(self, other):
         """checking for equality of square areas"""
-        return Square(self.area() > other.area())
+        return bool(Square(self.area() > other.area()))
 
     def __lt__(self, other):
         """checking for equality of square areas"""
-        return Square(self.area() < other.area())
+        return bool(Square(self.area() < other.area()))
 
     def __ge__(self, other):
         """checking for equality of square areas"""
-        return Square(self.area() >= other.area())
+        return bool(Square(self.area() >= other.area()))
 
     def __le__(self, other):
         """checking for equality of square areas"""
-        return Square(self.area() <= other.area())
+        return bool(Square(self.area() <= other.area()))
