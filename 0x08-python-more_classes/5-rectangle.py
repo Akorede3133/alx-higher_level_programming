@@ -62,6 +62,7 @@ class Rectangle:
                     print("#", end="")
                 print()
             return ("")
+
     def __repr__(self):
         """return a string representation of the instance"""
         width = self.__width
