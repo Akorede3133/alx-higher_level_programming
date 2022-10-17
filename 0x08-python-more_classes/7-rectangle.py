@@ -6,6 +6,8 @@ class Rectangle:
     """Public instances of Rect"""
 
     number_of_instances = 0
+    """Print symbol instance"""
+
     print_symbol = "#"
 
     """listing out its attributes"""
