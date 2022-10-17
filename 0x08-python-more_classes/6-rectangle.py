@@ -3,13 +3,16 @@
 
 
 class Rectangle:
+    """Public instance of Rect"""
+
     number_of_instances = 0
+
     """listing out its attributes"""
     def __init__(self, width=0, height=0):
         """initiator of each instance"""
         self.width = width
         self.height = height
-        type(self).number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
