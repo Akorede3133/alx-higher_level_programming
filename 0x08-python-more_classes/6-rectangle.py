@@ -64,6 +64,7 @@ class Rectangle:
                     print("#", end="")
                 print()
             return ("")
+
     def __repr__(self):
         """return a string representation of the instance"""
         width = self.__width
@@ -72,6 +73,6 @@ class Rectangle:
 
     def __del__(self):
         """deletes the instance"""
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         del self
         print("Bye rectangle...")
