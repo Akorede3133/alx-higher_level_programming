@@ -3,14 +3,17 @@
 
 
 class Rectangle:
+    """Public instances of Rect"""
+
     number_of_instances = 0
     print_symbol = "#"
+
     """listing out its attributes"""
     def __init__(self, width=0, height=0):
         """initiator of each instance"""
         self.width = width
         self.height = height
-        type(self).number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -73,7 +76,7 @@ class Rectangle:
 
     def __del__(self):
         """deletes the instance"""
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         del self
         print("Bye rectangle...")
 
