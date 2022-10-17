@@ -53,11 +53,9 @@ class Rectangle:
             return (hp + wp)
 
     def __str__(self):
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        else:
+        if self.__width != 0 or self.__height != 0:
             for i in range(self.__height):
                 for j in range(self.__width):
                     print("#", end="")
-                print()
-            return ("")
+                print("")
+            return ""
