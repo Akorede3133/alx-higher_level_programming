@@ -67,9 +67,10 @@ class Rectangle:
         else:
             for i in range(self.__height):
                 for j in range(self.__width):
-                    print(str(self.print_symbol), end="")
+                    print((self.print_symbol), end="")
                 print()
             return ("")
+
     def __repr__(self):
         """return a string representation of the instance"""
         width = self.__width
