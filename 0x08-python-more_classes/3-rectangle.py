@@ -56,8 +56,10 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
         else:
+            rectangle = []
             for i in range(self.__height):
                 for j in range(self.__width):
-                    print("#", end="")
-                print("")
-            return ""
+                    rectangle.append("#")
+                if i < self.__height - 1:
+                    rectangle.append("\n")
+            return "".join(rectangle)
