@@ -6,8 +6,6 @@ class Rectangle:
     """Public instances of Rect"""
 
     number_of_instances = 0
-    """Print symbol instance"""
-
     print_symbol = "#"
 
     """listing out its attributes"""
@@ -65,11 +63,13 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ("")
         else:
+            rectangle = []
             for i in range(self.__height):
                 for j in range(self.__width):
-                    print((self.print_symbol), end="")
-                print()
-            return ("")
+                    rectangle.append(str(self.print_symbol))
+                if i < self.__height - 1:
+                    rectangle.append("\n")
+            return "".join(rectangle)
 
     def __repr__(self):
         """return a string representation of the instance"""
