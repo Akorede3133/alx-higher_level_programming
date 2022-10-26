@@ -14,10 +14,11 @@ class Student:
         """that retrieves a dictionary rep of an instance"""
         instance_dict = self.__dict__
         new_dict = {}
-        if not attrs:
-            return (self.__dict__)
-        else:
+        if (type(attrs) == list and
+                all(type(element) == str for element in attrs)):
             for key, value in instance_dict.items():
                 if key in attrs:
                     new_dict[key] = value
             return (new_dict)
+        else:
+            return self.__dict__
