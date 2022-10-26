@@ -15,8 +15,9 @@ class Student:
         instance_dict = self.__dict__
         new_dict = {}
         if not attrs:
-            return instance_dict
-        for key, value in instance_dict.items():
-            if key in attrs:
-                new_dict[key] = value
-        return new_dict
+            return (self.__dict__)
+        else:
+            for key, value in instance_dict.items():
+                if key in attrs:
+                    new_dict[key] = value
+            return (new_dict)
