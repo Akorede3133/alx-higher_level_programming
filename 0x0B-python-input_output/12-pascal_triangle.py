@@ -6,11 +6,14 @@ def pascal_triangle(n):
     """ returns a list of lists of integers reping pascal"""
     if n <= 0:
         return ([])
-    parent = [[1], [1, 1]]
+    if n == 1:
+        parent = [[1]]
+    else:
+        parent = [[1], [1, 1]]
     for i in range(0, n - 2):
         child = []
         temp = parent[-1]
-        for j in range(0, len(temp)):
+        for j in range(0, len(temp) - 1):
             if j == 0:
                 value = 1
             else:
