@@ -5,7 +5,7 @@
 def pascal_triangle(n):
     """ returns a list of lists of integers reping pascal"""
     if n <= 0:
-        return [1]
+        return []
     parent = [[1]]
     for i in range(0, n - 1):
         temp = parent[i]
