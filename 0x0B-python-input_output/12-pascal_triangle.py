@@ -8,7 +8,7 @@ def pascal_triangle(n):
         return ([])
     elif n == 1:
         return [[1]]
-    else:
+    elif n > 1:
         parent = [[1], [1, 1]]
         for i in range(0, n - 2):
             child = []
