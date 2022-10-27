@@ -4,9 +4,9 @@
 
 def pascal_triangle(n):
     """ returns a list of lists of integers reping pascal"""
-    parent = [[1], [1, 1]]
     if n <= 0:
         return ([])
+    parent = [[1], [1, 1]]
     for i in range(0, n - 2):
         child = []
         temp = parent[i + 1]
